@@ -1,1 +1,14 @@
-
+binary_sensor:
+  - platform: gpio
+    pin:
+      number: 33
+      mode:
+        input: true
+        pulldown: true
+    name: PIR Motion
+    id: pir_motion_sensor
+    device_class: motion
+    entity_category: diagnostic
+    filters:
+      - delayed_off: ${pir_delay_off}
+      - delayed_on: ${pir_delay_on}
