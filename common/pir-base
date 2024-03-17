@@ -5,7 +5,7 @@ binary_sensor:
       mode:
         input: true
         pulldown: true
-    name: PIR Motion
+    name: PIR-bewegingssensor
     id: pir_motion_sensor
     device_class: motion
     entity_category: diagnostic
