@@ -1,1 +1,35 @@
-
+binary_sensor:
+  - platform: template
+    name: Daylight
+    id: Daylight
+    device_class: light
+    icon: "mdi:theme-light-dark"
+number:
+  - platform: template
+    name: Daylight limit
+    id: Daylight_Limit
+    entity_category: config
+    device_class: Illuminance
+    unit_of_measurement: "lx"
+    icon: "mdi:theme-light-dark"
+    optimistic: true
+    restore_value: true
+    initial_value: "100"
+    min_value: 1
+    max_value: 1000
+    step: 1
+sensor:
+  - platform: bh1750 #Illuminance Sensor
+    name: Illuminance
+    id: Illuminance
+    device_class: illuminance
+    address: 0x23
+    update_interval: ${illuminance_update_interval}
+    icon: "mdi:weather-sunny"
+    on_value:
+      lambda: |-
+        if (id(Illuminance).state >= id(Daylight_Limit).state) {
+          id(Daylight).publish_state(true);
+        } else {
+          id(Daylight).publish_state(false);
+        }
