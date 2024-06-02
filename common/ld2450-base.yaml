@@ -36,6 +36,7 @@ binary_sensor:
     id: zone1_occupancy
     filters:
       - delayed_off: !lambda return (id(zone_1_off_delay).state * 1000);
+    disabled_by_default: true
   - platform: template
     name: "Zone 2 Occupancy"
     id: zone2_occupancy
@@ -59,16 +60,19 @@ binary_sensor:
     id: target1_active
     lambda: |-
       return id(target1_distance).state != 0;
+    disabled_by_default: true
   - platform: template
     name: "Target 2 Active"
     id: target2_active
     lambda: |-
       return id(target2_distance).state != 0;
+    disabled_by_default: true
   - platform: template
     name: "Target 3 Active"
     id: target3_active
     lambda: |-
       return id(target3_distance).state != 0;
+    disabled_by_default: true
 
 number:
   - platform: template
@@ -91,7 +95,6 @@ number:
     optimistic: True
     restore_value: True
     initial_value: 600
-
   - platform: template
     name: "Zone 1 Begin X"
     id: zone1_begin_x
@@ -102,6 +105,7 @@ number:
     optimistic: True
     restore_value: True
     initial_value: -4000
+    disabled_by_default: true
   - platform: template
     name: "Zone 1 End X"
     id: zone1_end_x
@@ -112,6 +116,7 @@ number:
     optimistic: True
     restore_value: True
     initial_value: 4000
+    disabled_by_default: true
   - platform: template
     name: "Zone 1 Begin Y"
     id: zone1_begin_y
@@ -122,6 +127,7 @@ number:
     optimistic: True
     restore_value: True
     initial_value: 0
+    disabled_by_default: true
   - platform: template
     name: "Zone 1 End Y"
     id: zone1_end_y
@@ -132,6 +138,7 @@ number:
     optimistic: True
     restore_value: True
     initial_value: 6000
+    disabled_by_default: true
   - platform: template
     name: "Zone 1 Occupancy Off Delay"
     id: zone_1_off_delay
@@ -142,7 +149,7 @@ number:
     restore_value: True
     unit_of_measurement: "s"
     initial_value: 15
-
+    disabled_by_default: true
   - platform: template
     name: "Zone 2 Begin X"
     id: zone2_begin_x
@@ -307,6 +314,7 @@ sensor:
     unit_of_measurement: 'mm'
     state_class: measurement
     device_class: distance
+    disabled_by_default: true
   - platform: template
     name: "Target 1 Y"
     id: target1_y
@@ -314,6 +322,7 @@ sensor:
     unit_of_measurement: 'mm'
     state_class: measurement
     device_class: distance
+    disabled_by_default: true
   - platform: template
     name: "Target 1 Speed"
     id: target1_speed
@@ -321,6 +330,7 @@ sensor:
     unit_of_measurement: 'm/s'
     state_class: measurement
     device_class: speed
+    disabled_by_default: true
   - platform: template
     name: "Target 1 Resolution"
     id: target1_resolution
@@ -328,6 +338,7 @@ sensor:
     unit_of_measurement: 'mm'
     state_class: measurement
     device_class: distance
+    disabled_by_default: true
   - platform: template
     name: "Target 2 X"
     id: target2_x
@@ -335,6 +346,7 @@ sensor:
     unit_of_measurement: 'mm'
     state_class: measurement
     device_class: distance
+    disabled_by_default: true
   - platform: template
     name: "Target 2 Y"
     id: target2_y
@@ -342,6 +354,7 @@ sensor:
     unit_of_measurement: 'mm'
     state_class: measurement
     device_class: distance
+    disabled_by_default: true
   - platform: template
     name: "Target 2 Speed"
     id: target2_speed
@@ -349,6 +362,7 @@ sensor:
     unit_of_measurement: 'm/s'
     state_class: measurement
     device_class: speed
+    disabled_by_default: true
   - platform: template
     name: "Target 2 Resolution"
     id: target2_resolution
@@ -356,6 +370,7 @@ sensor:
     unit_of_measurement: 'mm'
     state_class: measurement
     device_class: distance
+    disabled_by_default: true
   - platform: template
     name: "Target 3 X"
     id: target3_x
@@ -363,6 +378,7 @@ sensor:
     unit_of_measurement: 'mm'
     state_class: measurement
     device_class: distance
+    disabled_by_default: true
   - platform: template
     name: "Target 3 Y"
     id: target3_y
@@ -370,6 +386,7 @@ sensor:
     unit_of_measurement: 'mm'
     state_class: measurement
     device_class: distance
+    disabled_by_default: true
   - platform: template
     name: "Target 3 Speed"
     id: target3_speed
@@ -377,6 +394,7 @@ sensor:
     unit_of_measurement: 'm/s'
     state_class: measurement
     device_class: speed
+    disabled_by_default: true
   - platform: template
     name: "Target 3 Resolution"
     id: target3_resolution
@@ -384,24 +402,28 @@ sensor:
     unit_of_measurement: 'mm'
     state_class: measurement
     device_class: distance
+    disabled_by_default: true
   - platform: template
     name: "Target 1 Angle"
     id: target1_angle
     accuracy_decimals: 0
     unit_of_measurement: '°'
     state_class: measurement
+    disabled_by_default: true
   - platform: template
     name: "Target 2 Angle"
     id: target2_angle
     accuracy_decimals: 0
     unit_of_measurement: '°'
     state_class: measurement
+    disabled_by_default: true
   - platform: template
     name: "Target 3 Angle"
     id: target3_angle
     accuracy_decimals: 0
     unit_of_measurement: '°'
     state_class: measurement
+    disabled_by_default: true
   - platform: template
     name: "Target 1 Distance"
     id: target1_distance
@@ -409,6 +431,7 @@ sensor:
     unit_of_measurement: 'mm'
     state_class: measurement
     device_class: distance
+    disabled_by_default: true
   - platform: template
     name: "Target 2 Distance"
     id: target2_distance
@@ -416,6 +439,7 @@ sensor:
     unit_of_measurement: 'mm'
     state_class: measurement
     device_class: distance
+    disabled_by_default: true
   - platform: template
     name: "Target 3 Distance"
     id: target3_distance
@@ -423,10 +447,12 @@ sensor:
     unit_of_measurement: 'mm'
     state_class: measurement
     device_class: distance
+    disabled_by_default: true
   - platform: template
     name: "Zone 1 Target Count"
     id: zone1_target_count
     accuracy_decimals: 0
+    disabled_by_default: true
   - platform: template
     name: "Zone 2 Target Count"
     id: zone2_target_count
