@@ -5,8 +5,8 @@ substitutions:
 # illuminance_update_interval: "2s"
   hidden_ssid: "false"
   log_level: DEBUG
-  pir_delay_off: "10s"
-  pir_delay_on: "500ms"
+# pir_delay_off: "10s"
+# pir_delay_on: "500ms"
   
 dashboard_import:
   package_import_url: github://blaauboer/multisensors/multisensor-mmwave-pir-lux-ha.yaml@main
