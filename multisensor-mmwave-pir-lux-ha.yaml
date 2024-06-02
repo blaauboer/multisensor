@@ -16,4 +16,4 @@ packages:
   device_base: !include common/multisensor-base.yaml
   ld2450_base: !include common/ld2450-base.yaml
   bh1750_base: !include common/bh1750-base.yaml
-  pir-base: !include common/pir-base.yaml
+  pir_base: !include common/pir-base.yaml
