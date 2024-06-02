@@ -37,5 +37,5 @@ binary_sensor:
     device_class: motion
     entity_category: diagnostic
     filters:
-      - delayed_off: id{pir_delay_off}
-      - delayed_on: id{pir_delay_on}
+      - delayed_off: id(pir_delay_off)
+      - delayed_on: id(pir_delay_on)
