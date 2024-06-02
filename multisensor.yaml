@@ -2,7 +2,7 @@ substitutions:
   name: "multisensor"
   friendly_name: "Multisensor"
   area: "Room"
-  illuminance_update_interval: "2s"
+# illuminance_update_interval: "2s"
   hidden_ssid: "false"
   log_level: DEBUG
   pir_delay_off: "10s"
