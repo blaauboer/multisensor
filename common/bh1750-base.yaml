@@ -37,7 +37,7 @@ sensor:
     id: Illuminance
     device_class: illuminance
     address: 0x23
-    update_interval: !lambda return id(illuminance_update_interval).state * 1000;
+    update_interval: ${illuminance_update_interval}
     icon: "mdi:weather-sunny"
     on_value:
       lambda: |-
