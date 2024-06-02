@@ -85,6 +85,7 @@ number:
     restore_value: True
     unit_of_measurement: "s"
     initial_value: 15
+    entity_category: config
   - platform: template
     name: "Max Distance"
     id: distance
@@ -95,6 +96,7 @@ number:
     optimistic: True
     restore_value: True
     initial_value: 600
+    entity_category: config
   - platform: template
     name: "Zone 1 Begin X"
     id: zone1_begin_x
