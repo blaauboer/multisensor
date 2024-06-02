@@ -39,5 +39,5 @@ binary_sensor:
     device_class: motion
     entity_category: diagnostic
     filters:
-      - delayed_off: !lambda return id(pir_delay_off).state * 1000;
+      - delayed_off: !lambda return id(pir_delay_off).state;
       - delayed_on: !lambda return id(pir_delay_on).state;
