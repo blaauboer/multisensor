@@ -18,6 +18,19 @@ number:
     min_value: 1
     max_value: 1000
     step: 1
+  - platform: template
+    name: Daylight limit
+    id: Daylight_Limit
+    entity_category: config
+    device_class: Illuminance
+    unit_of_measurement: "lx"
+    icon: "mdi:theme-light-dark"
+    optimistic: true
+    restore_value: true
+    initial_value: "100"
+    min_value: 1
+    max_value: 1000
+    step: 1
 sensor:
   - platform: bh1750 #Illuminance Sensor
     name: Illuminance
