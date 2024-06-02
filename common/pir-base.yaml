@@ -12,6 +12,7 @@ number:
     min_value: 0
     max_value: 100
     step: 5
+    mode: box
   - platform: template
     name: PIR delay on
     id: pir_delay_on
@@ -25,6 +26,7 @@ number:
     min_value: 0
     max_value: 1000
     step: 50
+    mode: box
 binary_sensor:
   - platform: gpio
     pin:
@@ -38,4 +40,4 @@ binary_sensor:
     entity_category: diagnostic
     filters:
       - delayed_off: !lambda return id(pir_delay_off).state * 1000;
-      - delayed_on: !lambda return id(pir_delay_on).state * 1000;
+      - delayed_on: !lambda return id(pir_delay_on).state;
