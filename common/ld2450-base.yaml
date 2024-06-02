@@ -108,6 +108,7 @@ number:
     restore_value: True
     initial_value: -4000
     disabled_by_default: true
+    entity_category: config
   - platform: template
     name: "Zone 1 End X"
     id: zone1_end_x
@@ -119,6 +120,7 @@ number:
     restore_value: True
     initial_value: 4000
     disabled_by_default: true
+    entity_category: config
   - platform: template
     name: "Zone 1 Begin Y"
     id: zone1_begin_y
@@ -130,6 +132,7 @@ number:
     restore_value: True
     initial_value: 0
     disabled_by_default: true
+    entity_category: config
   - platform: template
     name: "Zone 1 End Y"
     id: zone1_end_y
@@ -141,6 +144,7 @@ number:
     restore_value: True
     initial_value: 6000
     disabled_by_default: true
+    entity_category: config
   - platform: template
     name: "Zone 1 Occupancy Off Delay"
     id: zone_1_off_delay
@@ -152,6 +156,7 @@ number:
     unit_of_measurement: "s"
     initial_value: 15
     disabled_by_default: true
+    entity_category: config
   - platform: template
     name: "Zone 2 Begin X"
     id: zone2_begin_x
@@ -162,6 +167,7 @@ number:
     optimistic: True
     restore_value: True
     disabled_by_default: true
+    entity_category: config
   - platform: template
     name: "Zone 2 End X"
     id: zone2_end_x
@@ -172,6 +178,7 @@ number:
     optimistic: True
     restore_value: True
     disabled_by_default: true
+    entity_category: config
   - platform: template
     name: "Zone 2 Begin Y"
     id: zone2_begin_y
@@ -182,6 +189,7 @@ number:
     optimistic: True
     restore_value: True
     disabled_by_default: true
+    entity_category: config
   - platform: template
     name: "Zone 2 End Y"
     id: zone2_end_y
@@ -192,6 +200,7 @@ number:
     optimistic: True
     restore_value: True
     disabled_by_default: true
+    entity_category: config
   - platform: template
     name: "Zone 2 Occupancy Off Delay"
     id: zone_2_off_delay
@@ -203,7 +212,7 @@ number:
     unit_of_measurement: "s"
     initial_value: 15
     disabled_by_default: true
-
+    entity_category: config
   - platform: template
     name: "Zone 3 Begin X"
     id: zone3_begin_x
@@ -214,6 +223,7 @@ number:
     optimistic: True
     restore_value: True
     disabled_by_default: true
+    entity_category: config
   - platform: template
     name: "Zone 3 End X"
     id: zone3_end_x
@@ -224,6 +234,7 @@ number:
     optimistic: True
     restore_value: True
     disabled_by_default: true
+    entity_category: config
   - platform: template
     name: "Zone 3 Begin Y"
     id: zone3_begin_y
@@ -234,6 +245,7 @@ number:
     optimistic: True
     restore_value: True
     disabled_by_default: true
+    entity_category: config
   - platform: template
     name: "Zone 3 End Y"
     id: zone3_end_y
@@ -244,6 +256,7 @@ number:
     optimistic: True
     restore_value: True
     disabled_by_default: true
+    entity_category: config
   - platform: template
     name: "Zone 3 Occupancy Off Delay"
     id: zone_3_off_delay
@@ -255,7 +268,7 @@ number:
     unit_of_measurement: "s"
     initial_value: 15
     disabled_by_default: true
-
+    entity_category: config
   - platform: template
     name: "Zone 4 Begin X"
     id: zone4_begin_x
@@ -266,6 +279,7 @@ number:
     optimistic: True
     restore_value: True
     disabled_by_default: true
+    entity_category: config
   - platform: template
     name: "Zone 4 End X"
     id: zone4_end_x
@@ -276,6 +290,7 @@ number:
     optimistic: True
     restore_value: True
     disabled_by_default: true
+    entity_category: config
   - platform: template
     name: "Zone 4 Begin Y"
     id: zone4_begin_y
@@ -286,6 +301,7 @@ number:
     optimistic: True
     restore_value: True
     disabled_by_default: true
+    entity_category: config
   - platform: template
     name: "Zone 4 End Y"
     id: zone4_end_y
@@ -296,6 +312,7 @@ number:
     optimistic: True
     restore_value: True
     disabled_by_default: true
+    entity_category: config
   - platform: template
     name: "Zone 4 Occupancy Off Delay"
     id: zone_4_off_delay
@@ -307,7 +324,7 @@ number:
     unit_of_measurement: "s"
     initial_value: 15
     disabled_by_default: true
-
+    entity_category: config
 sensor:
   - platform: template
     name: "Target 1 X"
