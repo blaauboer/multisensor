@@ -23,10 +23,11 @@ globals:
 
 binary_sensor:
   - platform: template
-    name: "Occupancy"
+    name: "mmWave Occupancy"
+    id: mmwave_occupancy_sensor
     device_class: occupancy
     filters:
-      - delayed_off: !lambda return (id(off_delay).state * 1000);
+      - delayed_off: !lambda return (id(mmwave_off_delay).state * 1000);
     lambda: |-
       return (id(target1_distance).state != 0
         || id(target2_distance).state != 0
@@ -77,8 +78,8 @@ binary_sensor:
 
 number:
   - platform: template
-    name: "Occupancy Off Delay"
-    id: off_delay
+    name: "mmWave Occupancy Off Delay"
+    id: mmwave_off_delay
     max_value: 600
     min_value: 0
     step: 1
@@ -88,8 +89,8 @@ number:
     initial_value: 15
     entity_category: config
   - platform: template
-    name: "Max Distance"
-    id: distance
+    name: "mmWave Max Distance"
+    id: mmwave_distance
     max_value: 600
     min_value: 0
     unit_of_measurement: "cm"
@@ -594,7 +595,7 @@ uart:
           float p3_distance = sqrt(p3_x * p3_x + p3_y * p3_y);
           
 
-          float max_distance = float(id(distance).state) * 10;
+          float max_distance = float(id(mmwave_distance).state) * 10;
           if (p1_distance < max_distance) {
             if (id(target1_x).state != p1_x)
               id(target1_x).publish_state(p1_x);
