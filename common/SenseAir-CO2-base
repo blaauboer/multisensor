@@ -1,8 +1,8 @@
 # Example configuration entry
 uart:
   id: uart_co2
-  rx_pin: D0
-  tx_pin: D1
+  rx_pin: GPIO3
+  tx_pin: GPIO1
   baud_rate: 9600
 
 sensor:
