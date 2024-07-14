@@ -1,9 +1,12 @@
-# Example configuration entry I2C
+  # Example configuration entry I2C
 sensor:
   - platform: bme280_i2c
     temperature:
       name: "BME280 Temperature"
+        filters:
+        - offset: 1.0
     pressure:
       name: "BME280 Pressure"
     humidity:
       name: "BME280 Humidity"
+    address: 0x76
