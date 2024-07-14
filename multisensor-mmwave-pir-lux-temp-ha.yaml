@@ -18,3 +18,4 @@ packages:
   bh1750_base: !include common/bh1750-base.yaml
   pir_base: !include common/pir-base.yaml
   bme280_base: !include common/bme280-base.yaml
+  senseair_base: !include common/senseair-co2-base.yaml
