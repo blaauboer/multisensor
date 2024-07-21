@@ -32,7 +32,7 @@ binary_sensor:
       return (id(target1_distance).state != 0
         || id(target2_distance).state != 0
         || id(target3_distance).state != 0
-        || id(pir_motion_sensor).state != 0);
+        || id(pir_motion_sensor).state = 1);
   - platform: template
     name: "Zone 1 Occupancy"
     id: zone1_occupancy
