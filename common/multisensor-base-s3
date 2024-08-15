@@ -1,0 +1,42 @@
+esphome:
+  name: ${name}
+  comment: Multisensor
+  friendly_name: ${friendly_name}
+  name_add_mac_suffix: True
+  project: 
+    name: blaauboer.multisensor
+    version: "0.1"
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: esp-idf
+
+# Enable logging
+logger:
+  level: ${log_level}
+
+# Enable Home Assistant API
+api:
+
+ota:
+
+wifi:
+
+i2c:
+ sda: 21
+ scl: 22
+ scan: true
+
+button:
+  - platform: restart
+    icon: mdi:power-cycle
+    name: "Herstart"
+    entity_category: diagnostic
+
+text_sensor:
+  - platform: wifi_info
+    ip_address:
+      name: IP-adres
+    ssid:
+      name: Wifi-netwerk
